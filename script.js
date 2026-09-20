@@ -33,7 +33,14 @@ quoteForm.addEventListener('submit', async (event) => {
       body: new FormData(quoteForm),
       headers: { Accept: 'application/json' }
     });
-    const result = await response.json();
+    const responseText = await response.text();
+    let result = {};
+
+    try {
+      result = JSON.parse(responseText);
+    } catch (parseError) {
+      throw new Error('The form service returned an unreadable response.');
+    }
 
     if (!response.ok || !result.success) {
       throw new Error(result.message || 'Submission failed');
@@ -46,8 +53,10 @@ quoteForm.addEventListener('submit', async (event) => {
   } catch (error) {
     submitButton.disabled = false;
     submitButton.innerHTML = originalText;
-    formNote.textContent = 'Something went wrong. Please call 661-593-9252 or email us directly.';
+    const message = error instanceof Error ? error.message : 'Submission failed';
+    formNote.textContent = `We could not send your request: ${message} Please call 661-593-9252 or email us directly.`;
     formNote.style.color = '#c0392b';
+    console.error('Web3Forms submission failed:', error);
   }
 });
 
