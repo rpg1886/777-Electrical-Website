@@ -108,8 +108,8 @@ h2 { font-size: clamp(35px, 4vw, 54px); line-height: 1.07; letter-spacing: -.04e
 @media (max-width: 480px) { h1 { font-size: 47px; }.hero-lede { font-size: 16px; }.hero-proof { margin-top: 44px; gap: 7px; }.hero-proof i { margin: 0 7px; }.plan-canvas { height: 300px; }.floating-stat { transform: scale(.85); transform-origin: bottom right; }.stat-one { right: 0; }.stat-two { left: 0; transform-origin: bottom left; }.card-footer { gap: 14px; padding: 14px; font-size: 9px; }.service-grid { grid-template-columns: 1fr; }.service-card, .service-card:nth-child(3) { border-left: 1px solid var(--line); }.service-card { min-height: 270px; }.section-intro { margin-bottom: 40px; }.steps { grid-template-columns: 1fr; }.step { border-bottom: 1px solid var(--line); padding-bottom: 20px; }.quote-form { padding: 22px; grid-template-columns: 1fr; gap: 19px; }.full, .form-heading { grid-column: auto; }.contact-details { margin-top: 30px; }.about-seal { width: 220px; height: 220px; }.about-seal span { font-size: 29px; }.hero-actions { gap: 18px; }.modal-card { padding: 30px 22px; } }
 @media (min-width: 768px) { .mobile-action-bar { display: none; } }
 .brand { width: 84px; height: 84px; gap: 0; overflow: hidden; flex-shrink: 0; position: relative; background: var(--paper); }
-.brand img { display: block; width: 140px; height: 140px; max-width: none; object-fit: contain; transform: translate(-28px, -28px); mix-blend-mode: multiply; }
+.brand img { display: block; width: 124px; height: 124px; max-width: none; object-fit: contain; transform: translate(-20px, -20px); mix-blend-mode: multiply; }
 .about-seal { border: 0; }
 .about-seal img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .about-seal strong { max-width: 190px; font-size: 9px; line-height: 1.35; letter-spacing: .08em; }
-@media (max-width: 800px) { .brand { width: 68px; height: 68px; }.brand img { width: 112px; height: 112px; transform: translate(-22px, -22px); } }
+@media (max-width: 800px) { .brand { width: 68px; height: 68px; }.brand img { width: 100px; height: 100px; transform: translate(-16px, -16px); } }
