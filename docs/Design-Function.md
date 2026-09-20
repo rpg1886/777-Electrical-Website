@@ -109,6 +109,7 @@ I would rate it as **low to moderate complexity**:
 - The About seal uses the new service tagline and no longer displays `EST. 2004`.
 - The header, About section, and footer use the shared `images/triple-7-logo.jpeg` asset as the main logo.
 - The header and footer use a fixed overflow-hidden brand viewport to crop the JPEG's built-in white margins. The image is scaled to `118px` on desktop and `94px` on mobile, with slightly lower centered offsets so the top of the `TRIPLE` lettering is not clipped. It uses `mix-blend-mode: multiply` so the remaining white JPEG background blends into the paper surface instead of appearing as a white rectangle. This keeps the existing logo asset, alt text, header height, footer layout, and mobile navigation behavior unchanged.
+- The About logo uses the same overflow-hidden crop and `mix-blend-mode: multiply` treatment inside its existing circular seal. It is scaled to `380px` in the desktop/tablet seal and `310px` in the small mobile seal, keeping the actual artwork prominent while preserving the About section's dimensions and alignment.
 - The preferred production asset is a tightly cropped transparent SVG or PNG export of the logo. Replacing the JPEG with that asset would remove the need for blend-mode treatment while preserving the same `.brand` dimensions and markup contract.
 - Form validation is mostly browser-native; there is no custom validation logic.
 - The Web3Forms access key is visible in the frontend HTML, which is common for this type of service but can allow unwanted automated submissions.
