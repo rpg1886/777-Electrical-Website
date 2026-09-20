@@ -3,6 +3,7 @@ const siteNav = document.querySelector('#site-nav');
 const quoteForm = document.querySelector('#quote-form');
 const sampleForm = document.querySelector('#sample-form');
 const sampleModal = document.querySelector('#sample-modal');
+const sampleDownload = document.querySelector('#sample-download');
 
 function closeMenu() {
   siteNav.classList.remove('open');
@@ -57,6 +58,10 @@ async function submitToWeb3Forms(form, successMessage) {
     formNote.textContent = successMessage;
     formNote.style.color = '#9edb73';
     form.reset();
+    if (form === sampleForm) {
+      sampleDownload.hidden = false;
+      sampleDownload.focus();
+    }
   } catch (error) {
     submitButton.disabled = false;
     submitButton.innerHTML = originalText;
