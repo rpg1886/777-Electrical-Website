@@ -108,7 +108,7 @@ I would rate it as **low to moderate complexity**:
 - The hero proof section also displays `10+` years of field experience.
 - The About seal uses the new service tagline and no longer displays `EST. 2004`.
 - The header, About section, and footer use the shared `images/triple-7-logo.jpeg` asset as the main logo.
-- The header and footer use a fixed overflow-hidden brand viewport to crop the JPEG's built-in white margins. The cropped image uses `mix-blend-mode: multiply` so the remaining white JPEG background blends into the paper surface instead of appearing as a white rectangle. This keeps the existing logo asset, alt text, header height, footer layout, and mobile navigation behavior unchanged.
+- The header and footer use a fixed overflow-hidden brand viewport to crop the JPEG's built-in white margins. The image is scaled to `160px` on desktop and `130px` on mobile so the complete circular mark and lettering remain visible inside the viewport. It uses `mix-blend-mode: multiply` so the remaining white JPEG background blends into the paper surface instead of appearing as a white rectangle. This keeps the existing logo asset, alt text, header height, footer layout, and mobile navigation behavior unchanged.
 - The preferred production asset is a tightly cropped transparent SVG or PNG export of the logo. Replacing the JPEG with that asset would remove the need for blend-mode treatment while preserving the same `.brand` dimensions and markup contract.
 - Form validation is mostly browser-native; there is no custom validation logic.
 - The Web3Forms access key is visible in the frontend HTML, which is common for this type of service but can allow unwanted automated submissions.
