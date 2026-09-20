@@ -103,6 +103,9 @@ I would rate it as **low to moderate complexity**:
 
 - The hero button is labeled `Request an estimate` and jumps to the contact form. It does not claim to upload plans; the form accepts a secure plan or blueprint link instead.
 - The contact section explains that users can submit project details and a secure plan link for review.
+- The brand tagline is `Electrical & Consulting Services` in the header, footer, and About seal.
+- The trust section displays `10+` years of field experience.
+- The About seal uses the new service tagline and no longer displays `EST. 2004`.
 - Form validation is mostly browser-native; there is no custom validation logic.
 - The Web3Forms access key is visible in the frontend HTML, which is common for this type of service but can allow unwanted automated submissions.
 - The website depends on Google Fonts and Web3Forms being available online.
