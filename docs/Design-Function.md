@@ -108,6 +108,7 @@ I would rate it as **low to moderate complexity**:
 - The hero proof section also displays `10+` years of field experience.
 - The About seal uses the new service tagline and no longer displays `EST. 2004`.
 - The header, About section, and footer use the shared `images/triple-7-logo.jpeg` asset as the main logo.
+- The header and footer crop the asset's built-in white margins and enlarge the centered artwork for readability without changing the surrounding layout height.
 - Form validation is mostly browser-native; there is no custom validation logic.
 - The Web3Forms access key is visible in the frontend HTML, which is common for this type of service but can allow unwanted automated submissions.
 - The website depends on Google Fonts and Web3Forms being available online.
