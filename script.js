@@ -17,13 +17,38 @@ siteNav.querySelectorAll('a').forEach((link) => {
   });
 });
 
-quoteForm.addEventListener('submit', (event) => {
+quoteForm.addEventListener('submit', async (event) => {
   event.preventDefault();
+
   const submitButton = quoteForm.querySelector('button');
-  submitButton.innerHTML = 'Request prepared <span>✓</span>';
+  const originalText = submitButton.innerHTML;
   submitButton.disabled = true;
-  formNote.textContent = 'Thanks — your project details are ready. Connect this form to your preferred email or CRM to receive live submissions.';
-  formNote.style.color = '#33815a';
+  submitButton.innerHTML = 'Sending <span>...</span>';
+  formNote.textContent = 'Sending your project details...';
+  formNote.style.color = '';
+
+  try {
+    const response = await fetch(quoteForm.action, {
+      method: 'POST',
+      body: new FormData(quoteForm),
+      headers: { Accept: 'application/json' }
+    });
+    const result = await response.json();
+
+    if (!response.ok || !result.success) {
+      throw new Error(result.message || 'Submission failed');
+    }
+
+    submitButton.innerHTML = 'Request sent <span>✓</span>';
+    formNote.textContent = 'Thanks — your project details were sent successfully.';
+    formNote.style.color = '#33815a';
+    quoteForm.reset();
+  } catch (error) {
+    submitButton.disabled = false;
+    submitButton.innerHTML = originalText;
+    formNote.textContent = 'Something went wrong. Please call 661-593-9252 or email us directly.';
+    formNote.style.color = '#c0392b';
+  }
 });
 
 document.querySelector('#year').textContent = new Date().getFullYear();
