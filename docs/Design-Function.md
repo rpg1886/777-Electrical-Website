@@ -27,8 +27,10 @@ There is no backend in the project. Form submissions are sent to the external We
 
 3. **The hero section is displayed.**
    - Shows the main marketing message.
+   - Promotes fast-track estimates tailored to project scale and bid schedule.
+   - Displays a `24-hr` scope and schedule confirmation metric.
    - Displays a CSS-created estimate illustration.
-   - Provides a link to the contact form.
+   - Provides a rapid scope review link to the contact form.
    - Opens the sample-report modal when `Download sample estimating package` is clicked.
 
 4. **The main content sections provide static information.**
@@ -42,6 +44,8 @@ There is no backend in the project. Form submissions are sent to the external We
 
 5. **The contact form collects project information.**
    - Uses native HTML validation such as `required` and `type="email"`.
+   - Includes `Target Bid Date` as a native datepicker and `Project Type / Scale` as a dropdown.
+   - Retains the existing Web3Forms access key and endpoint, with `data-netlify="true"` present for form metadata.
    - Sends form data to `https://api.web3forms.com/submit`.
    - Does not reload the page because JavaScript intercepts submission.
 
@@ -102,11 +106,11 @@ I would rate it as **low to moderate complexity**:
 
 ## Important Observations
 
-- The hero button is labeled `Request an estimate` and jumps to the contact form. It does not claim to upload plans; the form accepts a secure plan or blueprint link instead.
+- The hero button is labeled `Upload Plans for Rapid Scope Review` and jumps to the contact form, which accepts a secure plan or blueprint link.
 - The contact section explains that users can submit project details and a secure plan link for review.
 - The brand tagline is `Electrical & Consulting Services` in the header, footer, and About seal.
-- The trust section displays `10+` years of field experience.
-- The hero proof section also displays `10+` years of field experience.
+- The trust metrics display `15+` years of field experience, a `24-Hr` scope review guarantee, and `100%` on-time bid day delivery.
+- Schedule messaging emphasizes fast-track takeoffs, contractor-aligned bid dates, and precision pricing aligned to the bid schedule instead of a fixed turnaround promise.
 - The About seal uses the new service tagline and no longer displays `EST. 2004`.
 - The header, About section, and footer use the shared `images/triple-7-logo.jpeg` asset as the main logo.
 - The header and footer use a fixed overflow-hidden brand viewport to crop the JPEG's built-in white margins. The image is scaled to `118px` on desktop and `94px` on mobile, with slightly lower centered offsets so the top of the `TRIPLE` lettering is not clipped. It uses `mix-blend-mode: multiply` so the remaining white JPEG background blends into the paper surface instead of appearing as a white rectangle. This keeps the existing logo asset, alt text, header height, footer layout, and mobile navigation behavior unchanged.
