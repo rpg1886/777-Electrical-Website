@@ -64,3 +64,7 @@ Keep the final report concise:
 - Highest-priority marketing, SEO, and CRO findings.
 - Validation performed and its result.
 - Assumptions, missing business details, and recommended next tests.
+
+Always update the design document everytime you modify any of the codes. C:\Users\Ryan\Projects\777-Electrical-Website\docs\Design-Function.md
+
+tracking file with user prompts, reasoning summary, and generated artifcats. should be created under "agents/prompts/" with a filename that includes the date and time of the prompt
