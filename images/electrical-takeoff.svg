@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Electrical takeoff plan and bid-ready summary</title>
+  <desc id="desc">A reviewed electrical plan with conduit routes, quantity takeoff totals, and a bid-ready summary.</desc>
+  <rect width="1200" height="700" fill="#1b2923"/>
+  <rect x="52" y="44" width="1096" height="612" fill="#f5f6f1"/>
+  <rect x="52" y="44" width="1096" height="58" fill="#1b2923"/>
+  <g font-family="Arial, sans-serif">
+    <text x="84" y="80" fill="#d9f06b" font-size="13" font-weight="700" letter-spacing="3">TRIPLE 7 / ELECTRICAL TAKEOFF</text>
+    <text x="1060" y="80" fill="#b8c4bd" font-size="11" text-anchor="end" letter-spacing="2">PLAN A-101 / REVIEWED</text>
+    <g stroke="#d7ddd7" stroke-width="1">
+      <path d="M90 145H760M90 205H760M90 265H760M90 325H760M90 385H760M90 445H760M90 505H760M90 565H760"/>
+      <path d="M150 120V610M220 120V610M290 120V610M360 120V610M430 120V610M500 120V610M570 120V610M640 120V610M710 120V610"/>
+    </g>
+    <g fill="none" stroke="#17211d" stroke-width="5">
+      <path d="M118 180H330V300H520V180H720V500H530V400H330V520H118Z"/>
+      <path d="M330 180V300M520 300V400M330 400V520M720 300H610V500M118 350H250V180"/>
+    </g>
+    <g fill="none" stroke="#f2633d" stroke-width="4">
+      <path d="M145 230H300V270H410V345H570V230H680"/>
+      <path d="M180 470H280V430H470V520H650"/>
+    </g>
+    <g fill="none" stroke="#9edb73" stroke-width="4">
+      <path d="M145 160V210H300V250H410V190H560V160H700"/>
+      <path d="M270 520V455H380V370H520V330H690"/>
+    </g>
+    <g fill="#f2633d"><circle cx="145" cy="230" r="8"/><circle cx="410" cy="345" r="8"/><circle cx="680" cy="230" r="8"/><circle cx="650" cy="520" r="8"/></g>
+    <g fill="#17211d" font-size="12" font-weight="700"><text x="125" y="150">PANEL A</text><text x="560" y="150">LIGHTING / POWER</text><text x="350" y="390">TENANT AREA</text><text x="575" y="545">FEEDER ROUTE</text></g>
+    <g transform="translate(790 130)">
+      <rect width="300" height="220" fill="white" stroke="#d7ddd7"/>
+      <rect width="300" height="38" fill="#f2633d"/>
+      <text x="18" y="25" fill="white" font-size="12" font-weight="700" letter-spacing="2">QUANTITY TAKEOFF</text>
+      <g stroke="#d7ddd7"><path d="M18 62H282M18 96H282M18 130H282M18 164H282M18 198H282"/></g>
+      <g fill="#66716d" font-size="12"><text x="18" y="83">3/4&quot; EMT CONDUIT</text><text x="18" y="117">LED FIXTURES</text><text x="18" y="151">DUPLEX RECEPTACLES</text><text x="18" y="185">PANEL DEVICES</text></g>
+      <g fill="#17211d" font-size="14" font-weight="700" text-anchor="end"><text x="270" y="83">12,654 LF</text><text x="270" y="117">184 EA</text><text x="270" y="151">96 EA</text><text x="270" y="185">42 EA</text></g>
+    </g>
+    <g transform="translate(790 390)">
+      <rect width="300" height="170" fill="#d9f06b"/>
+      <text x="20" y="34" fill="#17211d" font-size="11" font-weight="700" letter-spacing="2">BID-READY SUMMARY</text>
+      <text x="20" y="86" fill="#17211d" font-size="34" font-weight="700">$184,620</text>
+      <text x="20" y="116" fill="#45523f" font-size="12">Scope reviewed / pricing organized</text>
+      <rect x="20" y="137" width="118" height="7" fill="#f2633d"/><rect x="146" y="137" width="134" height="7" fill="#1b2923"/>
+    </g>
+    <text x="90" y="625" fill="#66716d" font-size="11" letter-spacing="2">MARKUPS VERIFIED / SCOPE ALIGNED / READY TO PRICE</text>
+  </g>
+</svg>
