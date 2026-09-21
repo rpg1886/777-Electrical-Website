@@ -7,7 +7,7 @@ This is a static single-page electrical estimating website made from:
 - `index.html`: page content and forms
 - `styles.css`: visual design and responsive layout
 - `script.js`: interactive behavior
-- `sample-takeoff-report.pdf`: downloadable sample report
+- `download/`: downloadable sample package files (PDF, Excel, and Word)
 - `README.md`: minimal project note
 
 There is no backend in the project. Form submissions are sent to the external Web3Forms service.
@@ -29,7 +29,7 @@ There is no backend in the project. Form submissions are sent to the external We
    - Shows the main marketing message.
    - Displays a CSS-created estimate illustration.
    - Provides a link to the contact form.
-   - Opens the sample-report modal when `Download sample takeoff report` is clicked.
+   - Opens the sample-report modal when `Download sample estimating package` is clicked.
 
 4. **The main content sections provide static information.**
    - Services
@@ -58,7 +58,8 @@ There is no backend in the project. Form submissions are sent to the external We
    - Sends it with `fetch()`.
    - Displays a success or failure message.
    - Re-enables the button if the request fails.
-   - Reveals the PDF download link after a successful sample-form submission.
+   - Reveals the sample download group after a successful sample-form submission.
+   - The group contains links to the PDF, Excel workbook, and Word document stored in `download/`.
 
 8. **The footer year is generated automatically.**
    - JavaScript inserts the current year into the element with ID `year`.
