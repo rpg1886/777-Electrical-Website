@@ -43,3 +43,7 @@ Keep the final report concise:
 - What changed and why.
 - Validation performed and its result.
 - Any assumptions, missing business details, or follow-up integration steps.
+
+Always update the design document everytime you modify any of the codes. C:\Users\Ryan\Projects\777-Electrical-Website\docs\Design-Function.md
+
+tracking file with user prompts, reasoning summary, and generated artifcats. should be created under "agents/prompts/" with a filename that includes the date and time of the prompt
