@@ -4,6 +4,22 @@ const quoteForm = document.querySelector('#quote-form');
 const sampleForm = document.querySelector('#sample-form');
 const sampleModal = document.querySelector('#sample-modal');
 const sampleDownloads = document.querySelector('#sample-downloads');
+const modalCard = sampleModal.querySelector('.modal-card');
+const modalClose = sampleModal.querySelector('.modal-close');
+let lastFocusedElement;
+
+function addConsentField(form, message) {
+  if (form.querySelector('[name="consent"]')) return;
+  const field = document.createElement('label');
+  field.className = 'consent-field full';
+  field.innerHTML = `<input type="checkbox" name="consent" required><span>${message}</span>`;
+  const submitButton = form.querySelector('button[type="submit"]');
+  form.insertBefore(field, submitButton);
+}
+
+addConsentField(quoteForm, 'I agree to be contacted about this estimate request. Project details are handled confidentially.');
+addConsentField(sampleForm, 'I agree to be contacted about this request.');
+quoteForm.querySelector('button[type="submit"]').firstChild.textContent = 'Get a Bid-Ready Estimate ';
 
 function closeMenu() {
   siteNav.classList.remove('open');
@@ -21,24 +37,41 @@ siteNav.querySelectorAll('a').forEach((link) => link.addEventListener('click', c
 
 document.querySelectorAll('[data-open-sample]').forEach((trigger) => {
   trigger.addEventListener('click', () => {
+    lastFocusedElement = trigger;
     sampleModal.hidden = false;
     document.body.classList.add('modal-open');
-    document.querySelector('#sample-name').focus();
+    modalClose.focus();
   });
 });
 
+function closeSampleModal() {
+  sampleModal.hidden = true;
+  document.body.classList.remove('modal-open');
+  if (lastFocusedElement) lastFocusedElement.focus();
+}
+
 document.querySelectorAll('[data-close-sample]').forEach((trigger) => {
-  trigger.addEventListener('click', () => {
-    sampleModal.hidden = true;
-    document.body.classList.remove('modal-open');
-  });
+  trigger.addEventListener('click', closeSampleModal);
 });
 
 document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && !sampleModal.hidden) {
-    sampleModal.hidden = true;
-    document.body.classList.remove('modal-open');
+  if (sampleModal.hidden) return;
+  if (event.key === 'Escape') closeSampleModal();
+  if (event.key !== 'Tab') return;
+  const focusable = modalCard.querySelectorAll('button, input, a[href]');
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
   }
+});
+
+document.querySelector('#plans').addEventListener('input', (event) => {
+  event.target.setCustomValidity(event.target.value && !/^https?:\/\//i.test(event.target.value) ? 'Enter a complete link beginning with https:// or http://' : '');
 });
 
 async function submitToWeb3Forms(form, successMessage) {
@@ -73,6 +106,7 @@ async function submitToWeb3Forms(form, successMessage) {
 
 quoteForm.addEventListener('submit', (event) => {
   event.preventDefault();
+  if (!quoteForm.reportValidity()) return;
   submitToWeb3Forms(quoteForm, 'Thanks — your project details were sent successfully.');
 });
 

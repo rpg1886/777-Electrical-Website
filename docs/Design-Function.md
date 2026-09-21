@@ -124,3 +124,14 @@ I would rate it as **low to moderate complexity**:
 ## Summary
 
 This is a well-developed static marketing page with responsive design and lightweight interactivity, but it is not a complex application. Its main complexity is in the visual layout and responsive CSS rather than in the JavaScript or business logic.
+
+## September 22, 2026 Implementation Update
+
+- Kept the paper-and-charcoal visual system, while preserving the dark estimating-tools and form surfaces that provide contractor-focused contrast. Safety orange and acid yellow remain restrained action accents.
+- Made the primary conversion path explicit with `Submit Plans for Scope Review` and `Get a Bid-Ready Estimate` CTAs.
+- Confirmed the technical authority bar includes Bluebeam, Electrical Bid Manager, and Accubid.
+- Added canonical, Open Graph, and Twitter metadata while preserving the verified `ProfessionalService` JSON-LD service list.
+- Added required consent language to the estimate and sample forms, visible confidentiality copy, an optional plan-link access note, and a honeypot remains in the estimate form. Web3Forms still provides the external submission and rate limiting responsibility remains with that provider.
+- Added visible focus states and reduced-motion handling. The sample modal now traps keyboard focus, closes with Escape or the backdrop, and restores focus to its trigger.
+- Kept entered fields intact after failed submissions and added a useful `http://` or `https://` validation message for plan links.
+- Added an honest FAQ covering request inputs, deliverables, confidentiality, and supported project types without adding unsupported turnaround or performance claims.

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rpg1886.github.io/777-Electrical-Website/sitemap.xml
