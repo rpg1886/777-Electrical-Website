@@ -44,7 +44,7 @@ There is no backend in the project. Form submissions are sent to the external We
 
 5. **The contact form collects project information.**
    - Uses native HTML validation such as `required` and `type="email"`.
-   - Includes `Target Bid Date` as a native datepicker and `Project Type / Scale` as a dropdown.
+   - Includes `Target Bid Date` as a native datepicker and `Project Type / Scale` as a dropdown with Commercial, Industrial, Multi-Family, Tenant Improvement, and Ground Up options.
    - Retains the existing Web3Forms access key and endpoint, with `data-netlify="true"` present for form metadata.
    - Sends form data to `https://api.web3forms.com/submit`.
    - Does not reload the page because JavaScript intercepts submission.
@@ -109,7 +109,7 @@ I would rate it as **low to moderate complexity**:
 - The hero button is labeled `Upload Plans for Rapid Scope Review` and jumps to the contact form, which accepts a secure plan or blueprint link.
 - The contact section explains that users can submit project details and a secure plan link for review.
 - The brand tagline is `Electrical & Consulting Services` in the header, footer, and About seal.
-- The trust metrics display `15+` years of field experience, a `24-Hr` scope review guarantee, and `100%` on-time bid day delivery.
+- The trust metrics display `15+` years of field experience, a `24-Hr` scope review guarantee, `100%` on-time bid day delivery, and `$900+ Million` in bids estimated.
 - Schedule messaging emphasizes fast-track takeoffs, contractor-aligned bid dates, and precision pricing aligned to the bid schedule instead of a fixed turnaround promise.
 - The About seal uses the new service tagline and no longer displays `EST. 2004`.
 - The header, About section, and footer use the shared `images/triple-7-logo.jpeg` asset as the main logo.
